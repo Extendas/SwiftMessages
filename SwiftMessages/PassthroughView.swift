@@ -37,7 +37,7 @@ class PassthroughView: UIControl {
             return view
         }
         
-        while !(view is PassthroughWindow) {
+        while view != nil && !(view is PassthroughWindow) {
             view = view?.superview
         }
         
